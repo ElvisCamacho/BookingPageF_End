@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Login + Firebase Database</title>
+  <!-- Cool Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+  <!-- Our stylesheet -->
+  <link rel="stylesheet" type="text/css" href="/css/login.css">
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+  <!-- Our script must be loaded after firebase references -->
+  <script src="/js/login.js"></script>
+</head>
+
+<body>
+  <div id="login-box">
+    <div class="left">
+      <h1 id='status'>Log ind</h1>
+
+      <input type="text" id="email" name="email" placeholder="E-mail" >
+      <input type="password" id="password" placeholder="Adgangskode">
+      <button onclick="login()">Login</button><br /><br />
+      <a href="register.html">Ny bruger? Opret bruger her</a>
+      <br />
+      <br /><br />
+      <a href="forgotPassword.html">Glemt adgangskode? Nulstil her</a>
+    
+    </div>
+
+    <div class="right">
+      <span class="loginwith">Log ind med<br />social network</span>
+      <button class="social-signin facebook" onclick="facebookSignin()">Log in with facebook</button>
+    </div>
+    <div class="or">-</div>
+  </div>
+  
+
+</body>
+
+</html>
